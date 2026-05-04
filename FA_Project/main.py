@@ -16,7 +16,7 @@ def get_db():
 
 @app.get("/")
 def welcome():
-    return {'Status':'Hello This Server Is Working!!!....}
+    return {'Status':'Hello This Server Is Working!!!....'}
 
 @app.post("/register", response_model=schemas.UserResponse)
 def register(user: schemas.UserCreate, db: Session = Depends(get_db)):
